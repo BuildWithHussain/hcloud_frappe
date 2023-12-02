@@ -10,8 +10,14 @@
   "image",
   "id",
   "column_break_kqtr",
-  "server_type",
   "status",
+  "server_type_section",
+  "server_type",
+  "cpu_type",
+  "cores",
+  "column_break_onbj",
+  "disk",
+  "memory",
   "location_section",
   "data_center",
   "column_break_vzrx",
@@ -84,12 +90,47 @@
    "fieldtype": "Data",
    "label": "Country",
    "read_only": 1
+  },
+  {
+   "fieldname": "server_type_section",
+   "fieldtype": "Section Break",
+   "label": "Server Type"
+  },
+  {
+   "fieldname": "cpu_type",
+   "fieldtype": "Data",
+   "label": "CPU Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cores",
+   "fieldtype": "Int",
+   "label": "Cores",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_onbj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "GB",
+   "fieldname": "disk",
+   "fieldtype": "Int",
+   "label": "Disk",
+   "read_only": 1
+  },
+  {
+   "description": "GB",
+   "fieldname": "memory",
+   "fieldtype": "Int",
+   "label": "Memory",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_virtual": 1,
  "links": [],
- "modified": "2023-12-02 22:34:52.095105",
+ "modified": "2023-12-02 22:46:55.926269",
  "modified_by": "Administrator",
  "module": "HCloud Frappe",
  "name": "Hetzner Server",

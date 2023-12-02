@@ -34,6 +34,11 @@ class HetznerServer(Document):
 			"data_center": server.datacenter.name,
 			"city": server.datacenter.location.city,
 			"country": server.datacenter.location.country,
+			"creation": server.created,
+			"disk": server.server_type.disk,
+			"memory": server.server_type.memory,
+			"cores": server.server_type.cores,
+			"cpu_type": server.server_type.cpu_type,
 		}
 
 		self._server = server
