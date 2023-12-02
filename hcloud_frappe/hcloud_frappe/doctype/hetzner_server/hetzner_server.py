@@ -30,6 +30,10 @@ class HetznerServer(Document):
 			"server_type": server.server_type.name,
 			"id": server.id,
 			"status": server.status.capitalize(),
+			"public_ip": server.public_net.ipv4.ip,
+			"data_center": server.datacenter.name,
+			"city": server.datacenter.location.city,
+			"country": server.datacenter.location.country,
 		}
 
 		self._server = server

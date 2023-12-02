@@ -6,11 +6,17 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "public_ip",
   "image",
   "id",
   "column_break_kqtr",
   "server_type",
-  "status"
+  "status",
+  "location_section",
+  "data_center",
+  "column_break_vzrx",
+  "city",
+  "country"
  ],
  "fields": [
   {
@@ -45,12 +51,45 @@
    "in_standard_filter": 1,
    "label": "Status",
    "read_only": 1
+  },
+  {
+   "fieldname": "public_ip",
+   "fieldtype": "Data",
+   "label": "Public IP",
+   "read_only": 1
+  },
+  {
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "data_center",
+   "fieldtype": "Data",
+   "label": "Data Center",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vzrx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "read_only": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_virtual": 1,
  "links": [],
- "modified": "2023-12-02 19:40:03.822732",
+ "modified": "2023-12-02 22:34:52.095105",
  "modified_by": "Administrator",
  "module": "HCloud Frappe",
  "name": "Hetzner Server",
