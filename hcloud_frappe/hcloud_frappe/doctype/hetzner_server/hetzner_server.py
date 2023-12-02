@@ -6,6 +6,16 @@ import frappe
 from frappe.model.document import Document
 from hcloud_frappe.utils import get_hetzner_client
 
+# running
+# initializing
+# starting
+# stopping
+# off
+# deleting
+# migrating
+# rebuilding
+# unknown
+
 
 class HetznerServer(Document):
 	def db_insert(self, *args, **kwargs):
@@ -19,7 +29,7 @@ class HetznerServer(Document):
 			"image": server.image.name,
 			"server_type": server.server_type.name,
 			"id": server.id,
-			"modified": frappe.utils.add_to_date(frappe.utils.now(), minutes=-20)
+			"status": server.status[0].upper() + server.status[1:]
 		}
 
 		self._server = server
@@ -43,6 +53,7 @@ class HetznerServer(Document):
 		client = get_hetzner_client()
 		servers = client.servers.get_all()
 
+
 		return [
 			frappe._dict(
 				{
@@ -50,6 +61,7 @@ class HetznerServer(Document):
 					"image": s.image.name,
 					"server_type": s.server_type.name,
 					"id": s.id,
+					"status": s.status[0].upper() + s.status[1:]
 				}
 			)
 			for s in servers
