@@ -29,7 +29,7 @@ class HetznerServer(Document):
 			"image": server.image.name,
 			"server_type": server.server_type.name,
 			"id": server.id,
-			"status": server.status[0].upper() + server.status[1:]
+			"status": server.status.capitalize(),
 		}
 
 		self._server = server
@@ -61,7 +61,7 @@ class HetznerServer(Document):
 					"image": s.image.name,
 					"server_type": s.server_type.name,
 					"id": s.id,
-					"status": s.status[0].upper() + s.status[1:]
+					"status": s.status.capitalize(),
 				}
 			)
 			for s in servers
