@@ -27,9 +27,10 @@
  "fields": [
   {
    "fieldname": "image",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Image",
+   "options": "Hetzner Server Image",
    "read_only": 1
   },
   {
@@ -38,10 +39,11 @@
   },
   {
    "fieldname": "server_type",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Server Type",
+   "options": "Hetzner Server Type",
    "read_only": 1
   },
   {
@@ -130,7 +132,7 @@
  "index_web_pages_for_search": 1,
  "is_virtual": 1,
  "links": [],
- "modified": "2023-12-02 22:46:55.926269",
+ "modified": "2023-12-05 18:31:51.222390",
  "modified_by": "Administrator",
  "module": "HCloud Frappe",
  "name": "Hetzner Server",
