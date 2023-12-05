@@ -36,6 +36,10 @@ class HetznerServerType(Document):
 	def get_list(args):
 		client = get_hetzner_client()
 		server_types = client.server_types.get_all()
+
+		if args.get("as_list"):
+			return [(st.name,st.description,st.description) for st in server_types]
+
 		return [frappe._dict({
 			"name": st.name,
 			"disk": st.disk,

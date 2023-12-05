@@ -33,6 +33,10 @@ class HetznerServerImage(Document):
 	def get_list(args):
 		client = get_hetzner_client()
 		images = client.images.get_all()
+
+		if args.get("as_list"):
+			return [(image.name,image.description,image.description) for image in images]
+		
 		return [frappe._dict({
 			"name": image.name,
 			"os_flavor": image.os_flavor,

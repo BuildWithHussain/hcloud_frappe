@@ -19,7 +19,13 @@ from hcloud_frappe.utils import get_hetzner_client
 
 class HetznerServer(Document):
 	def db_insert(self, *args, **kwargs):
-		pass
+		d = self.get_valid_dict()
+		client = get_hetzner_client()
+		return client.servers.create(
+			name=d.name,
+			server_type=client.server_types.get_by_name(d.server_type),
+			image=client.images.get_by_name(d.image),
+		)
 
 	def load_from_db(self):
 		client = get_hetzner_client()
