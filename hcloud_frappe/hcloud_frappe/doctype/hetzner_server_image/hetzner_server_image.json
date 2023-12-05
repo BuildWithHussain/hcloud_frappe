@@ -47,7 +47,7 @@
  "index_web_pages_for_search": 1,
  "is_virtual": 1,
  "links": [],
- "modified": "2023-12-05 18:18:28.779177",
+ "modified": "2023-12-05 22:53:05.348858",
  "modified_by": "Administrator",
  "module": "HCloud Frappe",
  "name": "Hetzner Server Image",
@@ -67,7 +67,6 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [

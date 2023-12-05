@@ -30,7 +30,8 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Image",
-   "options": "Hetzner Server Image"
+   "options": "Hetzner Server Image",
+   "read_only_depends_on": "eval:!Boolean(doc.__islocal)"
   },
   {
    "fieldname": "column_break_kqtr",
@@ -42,7 +43,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Server Type",
-   "options": "Hetzner Server Type"
+   "options": "Hetzner Server Type",
+   "read_only_depends_on": "eval:!Boolean(doc.__islocal)"
   },
   {
    "fieldname": "id",
@@ -130,7 +132,7 @@
  "index_web_pages_for_search": 1,
  "is_virtual": 1,
  "links": [],
- "modified": "2023-12-05 18:34:23.801699",
+ "modified": "2023-12-05 22:56:12.765301",
  "modified_by": "Administrator",
  "module": "HCloud Frappe",
  "name": "Hetzner Server",
