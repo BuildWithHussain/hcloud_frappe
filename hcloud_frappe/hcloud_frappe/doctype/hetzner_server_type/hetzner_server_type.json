@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2023-12-05 18:20:13.794713",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "disk",
+  "memory",
+  "description",
+  "column_break_znoh",
+  "cores",
+  "cpu_type"
+ ],
+ "fields": [
+  {
+   "description": "GB",
+   "fieldname": "disk",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Disk",
+   "read_only": 1
+  },
+  {
+   "description": "GB",
+   "fieldname": "memory",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Memory",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_znoh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cores",
+   "fieldtype": "Int",
+   "label": "Cores",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cpu_type",
+   "fieldtype": "Data",
+   "label": "CPU Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_virtual": 1,
+ "links": [],
+ "modified": "2023-12-05 18:26:33.892493",
+ "modified_by": "Administrator",
+ "module": "HCloud Frappe",
+ "name": "Hetzner Server Type",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "description"
+}
