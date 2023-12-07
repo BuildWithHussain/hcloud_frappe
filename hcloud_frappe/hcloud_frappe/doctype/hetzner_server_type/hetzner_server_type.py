@@ -16,7 +16,10 @@ class HetznerServerType(Document):
 	def load_from_db(self):
 		client = get_hetzner_client()
 		st = client.server_types.get_by_name(self.name)
-		
+
+		if not st:
+			frappe.throw(f"Server Type {self.name} not found", frappe.DoesNotExistError)
+
 		data = frappe._dict({
 			"name": st.name,
 			"disk": st.disk,

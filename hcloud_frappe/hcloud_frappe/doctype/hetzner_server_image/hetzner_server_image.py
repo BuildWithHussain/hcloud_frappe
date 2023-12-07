@@ -15,6 +15,10 @@ class HetznerServerImage(Document):
 	def load_from_db(self):
 		client = get_hetzner_client()
 		image = client.images.get_by_name(self.name)
+
+		if not image:
+			frappe.throw(f"Image {self.name} not found", frappe.DoesNotExistError)
+
 		data = frappe._dict({
 			"name": image.name,
 			"os_flavor": image.os_flavor,
