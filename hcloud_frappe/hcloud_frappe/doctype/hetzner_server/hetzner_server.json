@@ -11,6 +11,7 @@
   "id",
   "column_break_kqtr",
   "status",
+  "ssh_key",
   "server_type_section",
   "server_type",
   "cpu_type",
@@ -127,12 +128,20 @@
    "fieldtype": "Int",
    "label": "Memory",
    "read_only": 1
+  },
+  {
+   "depends_on": "eval:Boolean(doc.__islocal)",
+   "description": "Will be placed in the server at the time of creation",
+   "fieldname": "ssh_key",
+   "fieldtype": "Link",
+   "label": "SSH Key",
+   "options": "Hetzner SSH Key"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_virtual": 1,
  "links": [],
- "modified": "2023-12-05 22:56:12.765301",
+ "modified": "2023-12-07 23:29:47.742033",
  "modified_by": "Administrator",
  "module": "HCloud Frappe",
  "name": "Hetzner Server",
