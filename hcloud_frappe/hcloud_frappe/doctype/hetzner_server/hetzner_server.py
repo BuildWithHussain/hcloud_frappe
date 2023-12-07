@@ -30,6 +30,10 @@ class HetznerServer(Document):
 	def load_from_db(self):
 		client = get_hetzner_client()
 		server = client.servers.get_by_name(self.name)
+
+		if not server:
+			frappe.throw("Server not found", frappe.DoesNotExistError)
+
 		data = {
 			"name": server.name,
 			"image": server.image.name,
