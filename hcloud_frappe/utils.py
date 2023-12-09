@@ -5,7 +5,7 @@ from hcloud import Client
 
 # HETZNER_API_KEY
 def get_hetzner_client():
-    api_key = frappe.conf.get("HETZNER_API_KEYS")
+    api_key = frappe.conf.get("HETZNER_API_KEY")
     project_id = frappe.conf.get("HETZNER_PROJECT_ID")
 
     if not (api_key and project_id):
