@@ -1,0 +1,53 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"vOQPn4tvTg\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Hetzner</span>\",\"col\":12}},{\"id\":\"tYlcMlBEGW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Server\",\"col\":4}},{\"id\":\"MZHT14ubpp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Server Metrics Report\",\"col\":4}},{\"id\":\"eop7oIVhJi\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SSH Keys\",\"col\":4}}]",
+ "creation": "2023-12-09 19:18:06.637142",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "idx": 0,
+ "indicator_color": "red",
+ "is_hidden": 0,
+ "label": "Hetzner",
+ "links": [],
+ "modified": "2023-12-09 19:20:37.253122",
+ "modified_by": "Administrator",
+ "module": "HCloud Frappe",
+ "name": "Hetzner",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "format": "{}",
+   "label": "New Server",
+   "link_to": "Hetzner Server",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Server Metrics Report",
+   "link_to": "Hetzner Server Metrics",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "SSH Keys",
+   "link_to": "Hetzner SSH Key",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Hetzner"
+}
