@@ -21,6 +21,7 @@
   "memory",
   "location_section",
   "data_center",
+  "project_id",
   "column_break_vzrx",
   "city",
   "country"
@@ -136,12 +137,18 @@
    "fieldtype": "Link",
    "label": "SSH Key",
    "options": "Hetzner SSH Key"
+  },
+  {
+   "fieldname": "project_id",
+   "fieldtype": "Data",
+   "label": "Project ID",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_virtual": 1,
  "links": [],
- "modified": "2023-12-07 23:29:47.742033",
+ "modified": "2023-12-09 18:25:57.849663",
  "modified_by": "Administrator",
  "module": "HCloud Frappe",
  "name": "Hetzner Server",

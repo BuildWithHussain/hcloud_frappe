@@ -6,17 +6,6 @@ import frappe
 from frappe.model.document import Document
 from hcloud_frappe.utils import get_hetzner_client
 
-# running
-# initializing
-# starting
-# stopping
-# off
-# deleting
-# migrating
-# rebuilding
-# unknown
-
-
 class HetznerServer(Document):
     def db_insert(self, *args, **kwargs):
         d = self.get_valid_dict()
@@ -50,6 +39,7 @@ class HetznerServer(Document):
             "memory": server.server_type.memory,
             "cores": server.server_type.cores,
             "cpu_type": server.server_type.cpu_type,
+            "project_id": frappe.conf.get("HETZNER_PROJECT_ID"),
         }
 
         self._server = server

@@ -3,6 +3,10 @@
 
 frappe.ui.form.on("Hetzner Server", {
   refresh(frm) {
+	frm.add_web_link(
+		`https://console.hetzner.cloud/projects/${frm.doc.project_id}/servers/${frm.doc.id}/overview`, 
+		"View in Hetzner Console"
+	);
 
 	const action_label_map = {
 		"shutdown": "Shutdown",
